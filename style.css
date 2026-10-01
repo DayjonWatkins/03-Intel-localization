@@ -1,0 +1,67 @@
+/* Set the page colors and make sizing easier to control. */
+:root {
+	--ink: #071c32;
+	--blue: #0071c5;
+	--teal: #45b8a7;
+	--coral: #f47860;
+	--yellow: #f3c54e;
+	--paper: #f5f8f7;
+	--white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: Arial, Helvetica, sans-serif; }
+.hero { min-height: 590px; padding: 42px 7vw 78px; color: var(--white); background-color: var(--blue); background-image: linear-gradient(130deg, rgba(0, 43, 84, .82), rgba(0, 113, 197, .44)), url("img/rubaitul-azad-yYqJKJ0GO64-unsplash.jpg"); background-size: cover; background-position: center; }
+.hero-content { max-width: 760px; }
+.intel-logo { width: 116px; height: auto; margin-bottom: 96px; filter: brightness(0) invert(1); }
+.eyebrow { margin: 0 0 18px; color: #8ed8ef; font-size: 12px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { max-width: 760px; margin-bottom: 26px; font-size: clamp(48px, 8vw, 96px); line-height: .92; letter-spacing: -3px; }
+h1 span { color: #9fdef0; }
+.intro { max-width: 500px; margin-bottom: 36px; color: #e4f6fb; font-size: 18px; line-height: 1.6; }
+.scroll-note { margin-bottom: 0; color: #ffffff; font-size: 13px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
+.scroll-note span { padding-left: 8px; font-size: 20px; }
+.timeline-section { padding: 74px 0 92px; }
+.section-heading { max-width: 1280px; margin: 0 auto 38px; padding: 0 7vw; }
+.section-heading .eyebrow { color: var(--blue); }
+.section-heading h2 { max-width: 560px; margin-bottom: 0; font-size: clamp(28px, 4vw, 48px); line-height: 1.04; letter-spacing: -1px; }
+.timeline { display: flex; gap: 18px; overflow-x: auto; padding: 12px 7vw 32px; scroll-snap-type: x mandatory; scroll-padding-inline: 7vw; scrollbar-color: var(--blue) transparent; scrollbar-width: thin; }
+.timeline::-webkit-scrollbar { height: 10px; }
+.timeline::-webkit-scrollbar-track { background: rgba(7, 28, 50, .05); border-radius: 999px; }
+.timeline::-webkit-scrollbar-thumb { background: rgba(0, 113, 197, .7); border-radius: 999px; }
+.milestone { display: flex; position: relative; flex: 0 0 286px; min-height: 386px; overflow: hidden; flex-direction: column; scroll-snap-align: start; scroll-snap-stop: always; border-top: 9px solid var(--card-color); background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%); box-shadow: 0 8px 24px rgba(7, 28, 50, .1); transition: transform .2s ease, box-shadow .2s ease; contain: layout paint style; content-visibility: auto; }
+.milestone:hover, .milestone:focus-within { transform: translateY(-4px); box-shadow: 0 14px 24px rgba(7, 28, 50, .16); }
+.milestone img { width: 100%; height: 128px; object-fit: cover; transition: transform .2s ease; }
+.milestone:hover img, .milestone:focus-within img { transform: scale(1.03); }
+.milestone-blue { --card-color: var(--blue); }
+.milestone-teal { --card-color: var(--teal); }
+.milestone-coral { --card-color: var(--coral); }
+.milestone-yellow { --card-color: var(--yellow); }
+.milestone-content { display: flex; flex: 1; padding: 24px; flex-direction: column; }
+.milestone h2 { margin-bottom: 12px; color: var(--card-color); font-size: 34px; line-height: 1; }
+.milestone h3 { margin-bottom: 0; font-size: 20px; line-height: 1.15; }
+.milestone-detail { max-height: 0; margin: 0; overflow: hidden; color: #405369; font-size: 14px; line-height: 1.5; opacity: 0; transition: max-height .35s ease, margin .35s ease, opacity .35s ease; }
+.milestone:hover .milestone-detail, .milestone:focus-within .milestone-detail { max-height: 180px; margin-top: 16px; opacity: 1; }
+.card-prompt { margin: auto 0 0; padding-top: 22px; color: var(--card-color); font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: transform .2s ease; }
+.milestone:hover .card-prompt, .milestone:focus-within .card-prompt { transform: translateX(2px); }
+.card-prompt span { float: right; font-size: 18px; line-height: 10px; }
+footer { padding: 24px 7vw; color: #527083; border-top: 1px solid #d1e0e5; font-size: 12px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
+footer span { padding: 0 10px; color: var(--coral); }
+@media (max-width: 700px) {
+	.hero { min-height: 620px; padding: 28px 8vw 56px; }
+	.intel-logo { width: 90px; margin-bottom: 92px; }
+	h1 { font-size: 56px; letter-spacing: -2px; }
+	.intro { font-size: 16px; }
+	.timeline-section { padding: 58px 0 64px; }
+	.section-heading { padding: 0 8vw; }
+	.timeline { padding: 4px 8vw 16px; flex-direction: column; overflow: visible; scroll-snap-type: none; scroll-padding-inline: 0; }
+	.milestone { width: 100%; min-height: 0; flex-basis: auto; }
+	.milestone-detail { max-height: none; margin-top: 16px; opacity: 1; }
+	.milestone img { height: 150px; }
+	footer { padding: 20px 8vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
+	.milestone, .milestone-detail, .milestone img, .card-prompt { transition: none; }
+}
