@@ -12,7 +12,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: auto; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: Arial, Helvetica, sans-serif; }
-.hero { min-height: 590px; padding: 42px 7vw 78px; color: var(--white); background-color: var(--blue); background-image: linear-gradient(130deg, rgba(0, 43, 84, .82), rgba(0, 113, 197, .44)), url("img/rubaitul-azad-yYqJKJ0GO64-unsplash.jpg"); background-size: cover; background-position: center; }
+.hero { min-height: 590px; padding: 42px 7vw 78px; color: var(--white); background-color: var(--blue); background-image: linear-gradient(130deg, rgba(0, 43, 84, .88), rgba(0, 43, 84, .8)), url("img/rubaitul-azad-yYqJKJ0GO64-unsplash.jpg"); background-size: cover; background-position: center; }
 .hero-content { max-width: 760px; }
 .intel-logo { width: 116px; height: auto; margin-bottom: 96px; filter: brightness(0) invert(1); }
 .eyebrow { margin: 0 0 18px; color: #8ed8ef; font-size: 12px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
@@ -34,20 +34,28 @@ h1 span { color: #9fdef0; }
 .milestone:hover, .milestone:focus-within { transform: translateY(-4px); box-shadow: 0 14px 24px rgba(7, 28, 50, .16); }
 .milestone img { width: 100%; height: 128px; object-fit: cover; transition: transform .2s ease; }
 .milestone:hover img, .milestone:focus-within img { transform: scale(1.03); }
-.milestone-blue { --card-color: var(--blue); }
-.milestone-teal { --card-color: var(--teal); }
-.milestone-coral { --card-color: var(--coral); }
-.milestone-yellow { --card-color: var(--yellow); }
+.milestone-blue { --card-color: var(--blue); --card-text-color: var(--blue); }
+.milestone-teal { --card-color: var(--teal); --card-text-color: #1c6b61; }
+.milestone-coral { --card-color: var(--coral); --card-text-color: #aa3f2e; }
+.milestone-yellow { --card-color: var(--yellow); --card-text-color: #765500; }
 .milestone-content { display: flex; flex: 1; padding: 24px; flex-direction: column; }
-.milestone h2 { margin-bottom: 12px; color: var(--card-color); font-size: 34px; line-height: 1; }
+.milestone h2 { margin-bottom: 12px; color: var(--card-text-color); font-size: 34px; line-height: 1; }
 .milestone h3 { margin-bottom: 0; font-size: 20px; line-height: 1.15; }
+.water-waste-icon, .commitment-icon, .rise-icon { display: block; width: 40px; height: 40px; margin-bottom: 12px; }
+.water-waste-icon { color: var(--teal); }
+.commitment-icon { color: #aa3f2e; }
+.rise-icon { color: var(--blue); }
 .milestone-detail { max-height: 0; margin: 0; overflow: hidden; color: #405369; font-size: 14px; line-height: 1.5; opacity: 0; transition: max-height .35s ease, margin .35s ease, opacity .35s ease; }
 .milestone:hover .milestone-detail, .milestone:focus-within .milestone-detail { max-height: 180px; margin-top: 16px; opacity: 1; }
-.card-prompt { margin: auto 0 0; padding-top: 22px; color: var(--card-color); font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: transform .2s ease; }
+.card-prompt { margin: auto 0 0; padding-top: 22px; color: var(--card-text-color); font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: transform .2s ease; }
 .milestone:hover .card-prompt, .milestone:focus-within .card-prompt { transform: translateX(2px); }
 .card-prompt span { float: right; font-size: 18px; line-height: 10px; }
 footer { padding: 24px 7vw; color: #527083; border-top: 1px solid #d1e0e5; font-size: 12px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
 footer span { padding: 0 10px; color: var(--coral); }
+footer a { color: #405369; }
+footer a:hover, footer a:focus { color: var(--ink); }
+#newsletter-email { border-color: #6c757d; }
+#newsletter-email-help { color: #405369; }
 @media (max-width: 700px) {
 	.hero { min-height: 620px; padding: 28px 8vw 56px; }
 	.intel-logo { width: 90px; margin-bottom: 92px; }
